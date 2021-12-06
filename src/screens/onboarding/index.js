@@ -5,8 +5,12 @@ import styles from './style';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {slides} from './slides';
+import {useNavigation} from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function OnBoardingScreen() {
+  const navigation = useNavigation();
+
   const renderItem = ({item}) => {
     return (
       <View style={styles.slide}>
@@ -34,12 +38,18 @@ export default function OnBoardingScreen() {
       </View>
     );
   };
+  const onDone = () => {
+    const items = [['intro', 'intro']];
+    AsyncStorage.multiSet(items);
+    navigation.replace('Regulation');
+  };
   return (
     <AppIntroSlider
       data={slides}
       renderItem={renderItem}
       renderDoneButton={renderDoneButton}
       renderNextButton={renderNextButton}
+      onDone={onDone}
       showNextButton={false}
       showPrevButton={false}
     />

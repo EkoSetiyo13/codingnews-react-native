@@ -5,7 +5,7 @@ import styles from './style';
 export default function SimpleScreen() {
   return (
     <View style={styles.container}>
-      <Text> Hallo </Text>
+      <Text> SimpleScreen </Text>
     </View>
   );
 }

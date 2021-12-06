@@ -1,9 +1,8 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 // stack
-import {SplashStackNavigator} from '@navigation/AuthStack';
-import {IntroStackNavigator} from '@navigation/IntroStack';
-
+import BaseStackNavigator from '@navigation/baseStack';
+import TabStackNavigator from '@navigation/tabStack';
 const Main = createNativeStackNavigator();
 // const Main = createDrawerNavigator();
 
@@ -20,12 +19,17 @@ const screenOptionStyle = {
 
 const MainStackNavigator = () => {
   return (
-    <Main.Navigator
-      screenOptions={screenOptionStyle}
-      initialRouteName="Intro">
+    <Main.Navigator screenOptions={screenOptionStyle} initialRouteName="Base">
       <Main.Screen
-        name="Intro"
-        component={IntroStackNavigator}
+        name="Base"
+        component={BaseStackNavigator}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Main.Screen
+        name="Bottom"
+        component={TabStackNavigator}
         options={{
           headerShown: false,
         }}

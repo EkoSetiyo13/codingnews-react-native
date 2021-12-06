@@ -20,6 +20,7 @@ module.exports = {
         alias: {
           '@navigation': './src/navigation',
           '@component': './src/components',
+          '@container': './src/containers',
           '@service': './src/services',
           '@constant': './src/constants',
           '@screen': './src/screens',
