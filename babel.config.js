@@ -1,0 +1,40 @@
+module.exports = {
+  presets: ['module:metro-react-native-babel-preset'],
+  plugins: [
+    ['react-native-reanimated/plugin'],
+    [
+      'module-resolver',
+      {
+        root: ['.'],
+        extensions: [
+          '.ios.ts',
+          '.android.ts',
+          '.ts',
+          '.ios.tsx',
+          '.android.tsx',
+          '.tsx',
+          '.jsx',
+          '.js',
+          '.json',
+        ],
+        alias: {
+          '@navigation': './src/navigation',
+          '@component': './src/components',
+          '@service': './src/services',
+          '@constant': './src/constants',
+          '@screen': './src/screens',
+          '@config': './src/config',
+          '@asset': './src/assets',
+          '@store': './src/store',
+          '@theme': './src/themes',
+          '@saga': './src/sagas',
+          '@redux': './src/redux',
+          '@util': './src/utils',
+          '@data': './src/data',
+          '@api': './src/api',
+          '@lib': './src/lib',
+        },
+      },
+    ],
+  ],
+};
