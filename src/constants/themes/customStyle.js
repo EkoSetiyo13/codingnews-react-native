@@ -6,7 +6,7 @@ import {
 export const customStyle = {
   bottomScreen: {
     position: 'absolute',
-    bottom: 0,
+    bottom: hp('2.5%'),
     padding: hp('2.5%'),
   },
   topScreen: {

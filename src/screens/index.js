@@ -9,6 +9,7 @@ import MainHomeScreen from './home/main';
 
 //PROFILE
 import MainProfileScreen from './profile/main';
+import NoAuthScreen from './profile/no-auth';
 export {
   SplashScreen,
   PHPLanguageScreen,
@@ -16,5 +17,7 @@ export {
   OnBoardingScreen,
   RegulationScreen,
   MainHomeScreen,
+  //PROFILE
   MainProfileScreen,
+  NoAuthScreen,
 };
