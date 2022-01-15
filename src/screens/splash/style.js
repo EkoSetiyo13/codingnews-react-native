@@ -12,9 +12,20 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  imageSize :{
+    height: wp('50%'),
+    width: wp('50%'),
+  },
   versionText: {
-    ...theme.style.bottomScreen,
+    ...theme.style.versionBottom,
     color: theme.color.primary,
-    fontWeight: 'bold',
+    fontWeight: '900',
+    fontSize: hp('1.5%'),
+  },
+  createByText: {
+    ...theme.style.createByBottom,
+    color: theme.color.primary,
+    fontWeight: '900',
+    fontSize: hp('1.5%'),
   },
 });

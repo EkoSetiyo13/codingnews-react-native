@@ -10,6 +10,9 @@ import MainHomeScreen from './home/main';
 //PROFILE
 import MainProfileScreen from './profile/main';
 import NoAuthScreen from './profile/no-auth';
+
+//AUTH
+import SignInScreen from './auth/main';
 export {
   SplashScreen,
   PHPLanguageScreen,
@@ -20,4 +23,7 @@ export {
   //PROFILE
   MainProfileScreen,
   NoAuthScreen,
+
+  // AUTH
+  SignInScreen
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Easing} from 'react-native';
+import { Easing } from 'react-native';
 import {
   createStackNavigator,
   TransitionSpecs,
@@ -7,9 +7,15 @@ import {
   CardStyleInterpolators,
   TransitionPresets,
 } from '@react-navigation/stack';
-import {SplashScreen, OnBoardingScreen, RegulationScreen, SimpleScreen} from '@screen';
+import {
+  SplashScreen,
+  OnBoardingScreen,
+  RegulationScreen,
+  SimpleScreen,
+  SignInScreen
+} from '@screen';
 import BottomTabContainer from '@container/BottomTab/index';
-import {isOptions} from '@service/helpers/checkUtil';
+import { isOptions } from '@service/helpers/checkUtil';
 import {
   horizontalTransition,
   verticalTransition,
@@ -28,7 +34,6 @@ const screenOptionStyle = {
   headerBackTitle: 'Back',
   headerMode: 'screen',
 };
-console.log(BottomTabContainer);
 // const route = {
 //   splash: [
 //     {
@@ -72,19 +77,16 @@ const route = [
       name: 'Splash',
       component: SplashScreen,
     },
-  ],
-  [
     {
       name: 'OnBoarding',
       component: OnBoardingScreen,
     },
-  ],
-  [
     {
       name: 'Regulation',
       component: RegulationScreen,
       options: {
-        headerShown: true,
+        headerShown: false,
+        headerTitle: 'Baca Dulu',
       },
     },
   ],
@@ -94,12 +96,20 @@ const route = [
       component: BottomTabContainer,
     },
   ],
+  //EXAMPLE
   [
     {
       name: 'Simple',
       component: SimpleScreen,
     },
   ],
+  //AUTH
+  [
+    {
+      name: 'SignIn',
+      component: SignInScreen,
+    },
+  ]
 ];
 
 const BaseStackNavigator = () => {

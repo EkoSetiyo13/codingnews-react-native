@@ -9,6 +9,16 @@ export const customStyle = {
     bottom: hp('2.5%'),
     padding: hp('2.5%'),
   },
+  versionBottom: {
+    position: 'absolute',
+    bottom: hp('2.5%'),
+    padding: hp('2.5%'),
+  },
+  createByBottom: {
+    position: 'absolute',
+    bottom: hp('4%'),
+    padding: hp('4%'),
+  },
   topScreen: {
     position: 'absolute',
     top: 0,
