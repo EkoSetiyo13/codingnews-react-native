@@ -115,26 +115,7 @@ const route = [
 const BaseStackNavigator = () => {
   return (
     <Stack.Navigator
-      // screenOptions={screenOptionStyle}
       initialRouteName="Splash">
-      {/* <Stack.Group>
-        {route.splash.map((data, index) => {
-          return (
-            <Stack.Screen
-              key={index}
-              name={data.name}
-              component={data.component}
-              options={{
-                ...data.options,
-                headerShown: isOptions(data, 'headerShown')
-                  ? data.options.headerShown
-                  : false,
-              }}
-            />
-          );
-        })}
-      </Stack.Group> */}
-
       {route.map((main, index) => {
         return (
           <Stack.Group key={index}>
