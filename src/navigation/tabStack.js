@@ -4,7 +4,6 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import { MainHomeScreen, MainProfileScreen, NoAuthScreen } from '@screen';
 import BaseStackNavigator from '@navigation/baseStack';
 import { theme } from '@constant/themes';
-import { Text } from 'react-native';
 
 const Tab = createMaterialBottomTabNavigator();
 

@@ -1,9 +1,14 @@
 import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
 // stack
 import BaseStackNavigator from '@navigation/baseStack';
 import TabStackNavigator from '@navigation/tabStack';
-const Main = createNativeStackNavigator();
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createStackNavigator } from '@react-navigation/stack';
+import { DrawerContainer } from '@container'
+
+const Drawer = createDrawerNavigator();
+const Main = createStackNavigator();
+
 // const Main = createDrawerNavigator();
 
 const screenOptionStyle = {
@@ -17,24 +22,39 @@ const screenOptionStyle = {
   headerShown: true,
 };
 
+const screenOptionDrawerStyle = {
+  headerShown: false,
+};
+
 const MainStackNavigator = () => {
   return (
-    <Main.Navigator screenOptions={screenOptionStyle} initialRouteName="Base">
-      <Main.Screen
-        name="Base"
-        component={BaseStackNavigator}
-        options={{
-          headerShown: false,
-        }}
-      />
-      <Main.Screen
-        name="Bottom"
-        component={TabStackNavigator}
-        options={{
-          headerShown: false,
-        }}
-      />
-    </Main.Navigator>
+    <Drawer.Navigator
+      initialRouteName="Content"
+      screenOptions={screenOptionDrawerStyle}
+      drawerContent={({ navigation }) => (
+        <DrawerContainer navigation={navigation} />
+      )}>
+      <Drawer.Screen name="Content">
+        {() => (
+          <Main.Navigator screenOptions={screenOptionStyle} initialRouteName="Base">
+            <Main.Screen
+              name="Base"
+              component={BaseStackNavigator}
+              options={{
+                headerShown: false,
+              }}
+            />
+            <Main.Screen
+              name="Bottom"
+              component={TabStackNavigator}
+              options={{
+                headerShown: false,
+              }}
+            />
+          </Main.Navigator>
+        )}
+      </Drawer.Screen>
+    </Drawer.Navigator>
   );
 };
 

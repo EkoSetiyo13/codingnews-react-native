@@ -33,43 +33,7 @@ const screenOptionStyle = {
   headerTintColor: 'white',
   headerBackTitle: 'Back',
   headerMode: 'screen',
-};
-// const route = {
-//   splash: [
-//     {
-//       name: 'Splash',
-//       component: SplashScreen,
-//       options: {...centerTransition},
-//     },
-//   ],
-//   onboarding: [
-//     {
-//       name: 'OnBoarding',
-//       component: OnBoardingScreen,
-//     },
-//     {
-//       name: 'Regulation',
-//       component: RegulationScreen,
-//       options: {
-//         headerShown: true,
-//         ...fadeCenterTransition,
-//       },
-//     },
-//   ],
-//   auth: [
-//     {
-//       name: 'OnBoarding',
-//       component: OnBoardingScreen,
-//     },
-//     {
-//       name: 'Regulation',
-//       component: RegulationScreen,
-//       options: {
-//         headerShown: true,
-//       },
-//     },
-//   ],
-// };
+}
 
 const route = [
   [
