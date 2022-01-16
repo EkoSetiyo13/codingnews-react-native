@@ -6,6 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "androidclean": "cd android && gradlew clean && cd..",
     "test": "jest",
     "lint": "eslint ."
   },
@@ -32,6 +33,7 @@
     "react-native-responsive-screen": "^1.4.2",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.9.0",
+    "react-native-super-grid": "^4.2.0",
     "react-native-tab-view": "^3.1.1",
     "react-native-vector-icons": "^9.0.0",
     "react-ridge-translations": "^1.0.4"
