@@ -10,11 +10,13 @@ export default function SignInScreen() {
   const navigation = useNavigation();
 
   const handleClickNoSigIn = () => {
-    navigation.navigate('Bottom');
+    navigation.navigate('Bottom', {
+      screen: 'HomeTab',
+      initial: false,
+    });
   }
   return (
     <View style={styles.container}>
-
       <IconButton
         icon="information"
         animated={true}

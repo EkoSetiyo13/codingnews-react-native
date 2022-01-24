@@ -44,13 +44,13 @@ const MainStackNavigator = () => {
                 headerShown: false,
               }}
             />
-            <Main.Screen
+            {/* <Main.Screen
               name="Bottom"
               component={TabStackNavigator}
               options={{
                 headerShown: false,
               }}
-            />
+            /> */}
           </Main.Navigator>
         )}
       </Drawer.Screen>

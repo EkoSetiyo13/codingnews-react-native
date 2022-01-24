@@ -25,7 +25,7 @@ export default function MainHomeScreen() {
   const onPress = () => navigation.navigate('Base', { screen: 'Regulation' });
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <HeaderComponent />
+      <HeaderComponent notif={true} />
       <ScrollView
         nestedScrollEnabled={true}
         horizontal={false}
@@ -62,7 +62,7 @@ export default function MainHomeScreen() {
         <View style={styles.viewText}>
           <Text style={styles.titleText}>Tahukah Kamu?</Text>
           {arrayNews.map((index, data) =>
-            <TouchableOpacity activeOpacity={0.4} style={{ marginTop: 10, marginBottom: 10, width: '100%' }}>
+            <TouchableOpacity key={index} activeOpacity={0.4} style={{ marginTop: 10, marginBottom: 10, width: '100%' }}>
               <Card style={{ height: 125 }}>
                 <Card.Content>
                   <Text style={styles.titleText}>Click Me</Text>
@@ -74,7 +74,7 @@ export default function MainHomeScreen() {
         <View style={styles.viewText}>
           <Text style={styles.titleText}>Pengetahuan Terbaru?</Text>
           {arrayNews.map((index, data) =>
-            <TouchableOpacity activeOpacity={0.4} style={{ marginTop: 10, marginBottom: 10, width: '100%' }}>
+            <TouchableOpacity key={index} activeOpacity={0.4} style={{ marginTop: 10, marginBottom: 10, width: '100%' }}>
               <Card style={{ height: 125, }}>
                 <Card.Content>
                   <Text style={styles.titleText}>Click Me</Text>

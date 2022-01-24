@@ -13,6 +13,10 @@ import NoAuthScreen from './profile/no-auth';
 
 //AUTH
 import SignInScreen from './auth/main';
+
+//OTHER
+import NotificationScreen from './notification'
+
 export {
   SplashScreen,
   PHPLanguageScreen,
@@ -25,5 +29,8 @@ export {
   NoAuthScreen,
 
   // AUTH
-  SignInScreen
+  SignInScreen,
+
+  //OTHER
+  NotificationScreen
 };

@@ -12,7 +12,8 @@ import {
   OnBoardingScreen,
   RegulationScreen,
   SimpleScreen,
-  SignInScreen
+  SignInScreen,
+  NotificationScreen
 } from '@screen';
 import BottomTabContainer from '@container/BottomTab/index';
 import { isOptions } from '@service/helpers/checkUtil';
@@ -22,6 +23,8 @@ import {
   centerTransition,
   fadeCenterTransition,
 } from './transitions';
+import TabStackNavigator from '@navigation/tabStack';
+
 //BEST PRACTICE FOR
 const Stack = createStackNavigator();
 
@@ -73,7 +76,24 @@ const route = [
       name: 'SignIn',
       component: SignInScreen,
     },
-  ]
+  ],
+  [
+    {
+      name: 'Notif',
+      component: NotificationScreen,
+      options: {
+        headerShown: true,
+        headerTitle: 'Pemberitahuan',
+        ...horizontalTransition
+      }
+    },
+  ],
+  [
+    {
+      name: 'Bottom',
+      component: TabStackNavigator,
+    },
+  ],
 ];
 
 const BaseStackNavigator = () => {
@@ -82,7 +102,7 @@ const BaseStackNavigator = () => {
       initialRouteName="Splash">
       {route.map((main, index) => {
         return (
-          <Stack.Group key={index}>
+          <Stack.Group key={index} navigationKey={`${index}`}>
             {main.map((data, index) => {
               return (
                 <Stack.Screen
