@@ -7,7 +7,7 @@ export default function HeaderComponent(props) {
     const { notif } = props;
     const navigation = useNavigation();
 
-    const handleNotificationScreen = () => navigation.navigate('Base', { screen: 'Notif' });
+    const handleNotificationScreen = () => navigation.navigate('Notif');
 
 
     const _goBack = () => console.log('Went back');

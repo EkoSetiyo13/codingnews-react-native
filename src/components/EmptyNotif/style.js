@@ -8,12 +8,17 @@ import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 
 export default StyleSheet.create({
   container: {
-    flex: 1,
-    margin: 10,
-    width: wp('100%')
+    height: hp('100%'),
+    width: wp('100%'),
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   infoText: {
     fontSize: theme.fontSize.h4,
     color: "#333333",
+    marginTop: 10
+  },
+  reloadButton: {
+    marginTop: 20
   }
 });

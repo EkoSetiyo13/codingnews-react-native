@@ -10,10 +10,7 @@ export default function SignInScreen() {
   const navigation = useNavigation();
 
   const handleClickNoSigIn = () => {
-    navigation.navigate('Bottom', {
-      screen: 'HomeTab',
-      initial: false,
-    });
+    navigation.navigate('Bottom');
   }
   return (
     <View style={styles.container}>

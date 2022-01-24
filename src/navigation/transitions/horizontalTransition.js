@@ -7,14 +7,14 @@ export const horizontalTransition = {
     open: {
       animation: 'timing',
       config: {
-        duration: 1000,
+        duration: 500,
         easing: Easing.linier,
       },
     },
     close: {
       animation: 'timing',
       config: {
-        duration: 1000,
+        duration: 500,
         easing: Easing.linier,
       },
     },

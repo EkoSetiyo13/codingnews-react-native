@@ -22,7 +22,8 @@ export default function MainHomeScreen() {
   useEffect(() => {
 
   }, []);
-  const onPress = () => navigation.navigate('Base', { screen: 'Regulation' });
+  // const onPress = () => navigation.navigate('Base', { screen: 'Regulation' });
+  const onPress = () => navigation.navigate('Regulation');
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <HeaderComponent notif={true} />
