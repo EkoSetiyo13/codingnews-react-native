@@ -7,6 +7,9 @@ import {
   DarkTheme,
   useTheme,
 } from '@react-navigation/native';
+import {
+  Provider,
+} from "react-native-paper";
 import MainStackNavigator from '@navigation';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { theme } from '@constant/themes';
@@ -20,7 +23,7 @@ export default function App() {
     LogBox.ignoreAllLogs();
   }, [])
   return (
-    <View style={styles.container}>
+    <Provider>
       <NavigationContainer theme={scheme === 'dark' ? DarkTheme : DefaultTheme}>
         <SafeAreaProvider>
           <StatusBar backgroundColor={theme.main.colorStatusBar} />
@@ -28,7 +31,8 @@ export default function App() {
         </SafeAreaProvider>
       </NavigationContainer>
       <FlashMessage />
-    </View>
+    </Provider >
+
   );
 }
 

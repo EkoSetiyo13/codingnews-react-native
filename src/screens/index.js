@@ -17,6 +17,9 @@ import SignInScreen from './auth/main';
 //OTHER
 import NotificationScreen from './notification'
 
+//EXPLORE
+import ExploreScreen from './explore'
+
 export {
   SplashScreen,
   PHPLanguageScreen,
@@ -32,5 +35,8 @@ export {
   SignInScreen,
 
   //OTHER
-  NotificationScreen
+  NotificationScreen,
+
+  //EXPLORE
+  ExploreScreen,
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { MainHomeScreen, MainProfileScreen, NoAuthScreen } from '@screen';
+import { MainHomeScreen, MainProfileScreen, ExploreScreen, NoAuthScreen } from '@screen';
 import { theme } from '@constant/themes';
 
 const Tab = createMaterialBottomTabNavigator();
@@ -27,7 +27,7 @@ const TabStackNavigator = () => {
       />
       <Tab.Screen
         name="Explore"
-        component={MainProfileScreen}
+        component={ExploreScreen}
         options={{
           tabBarLabel: 'Jelajahi',
           tabBarIcon: ({ color }) => (
